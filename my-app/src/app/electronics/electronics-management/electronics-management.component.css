@@ -1,0 +1,9 @@
+.electronic-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .electronic-item:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+  }
+  

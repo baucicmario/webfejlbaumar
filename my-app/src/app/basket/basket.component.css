@@ -1,0 +1,22 @@
+.basket-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .basket-item-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .basket-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 16px;
+  }
+  
+  .basket-item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  

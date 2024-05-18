@@ -1,0 +1,43 @@
+<!-- Import Angular Material Modules in your module file -->
+<!-- Example: import { MatInputModule } from '@angular/material/input'; -->
+
+<div>
+  <!-- Structural Directive -->
+  <mat-list>
+    <!-- Attribute Directives: *ngFor, (click), class -->
+    <mat-list-item *ngFor="let electronic of electronicsList" (click)="selectElectronic(electronic)" class="electronic-item">
+      <!-- Interpolation: {{ }} -->
+      <div>{{ electronic.name }}</div>
+    </mat-list-item>
+  </mat-list>
+
+  <!-- Structural Directive -->
+  <div *ngIf="selectedElectronic">
+    <!-- Attribute Directive: ngModel -->
+    <mat-form-field>
+      <!-- Attribute Directive: matInput -->
+      <input matInput placeholder="Name" [(ngModel)]="selectedElectronic.name">
+    </mat-form-field>
+    <mat-form-field>
+      <!-- Attribute Directives: matInput, type, placeholder, ngModel -->
+      <input matInput type="number" placeholder="Price" [(ngModel)]="selectedElectronic.price">
+    </mat-form-field>
+    <mat-form-field>
+      <!-- Attribute Directives: matInput, type, placeholder, ngModel -->
+      <input matInput type="text" placeholder="Image URL" [(ngModel)]="selectedElectronic.imageUrl">
+    </mat-form-field>
+    <mat-form-field>
+      <!-- Attribute Directives: matInput, type, placeholder, ngModel -->
+      <input matInput type="text" placeholder="Category" [(ngModel)]="selectedElectronic.category">
+    </mat-form-field>
+    <mat-form-field>
+      <!-- Attribute Directive: matInput -->
+      <textarea matInput placeholder="Description" [(ngModel)]="selectedElectronic.description"></textarea>
+    </mat-form-field>
+
+    <!-- Attribute Directives: mat-raised-button, color, (click) -->
+    <button mat-raised-button color="primary" (click)="addElectronic()">Add</button>
+    <button mat-raised-button color="primary" (click)="updateElectronic()">Update</button>
+    <button mat-raised-button color="warn" (click)="deleteElectronic(selectedElectronic.id)">Delete</button>
+  </div>
+</div>

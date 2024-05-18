@@ -1,0 +1,19 @@
+<div class="container" *ngIf="electronic">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ electronic.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="electronic.imageUrl" [alt]="electronic.name">
+    <mat-card-content>
+      <p>{{ electronic.description }}</p>
+      <p class="price">{{ electronic.price | currency:'USD':'symbol':'1.2-2' }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Buy Now</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div *ngIf="!electronic" class="not-found">
+  <h2>Electronic Not Found</h2>
+</div>

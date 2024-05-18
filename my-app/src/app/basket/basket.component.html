@@ -1,0 +1,10 @@
+<mat-card *ngFor="let item of basketItems" class="basket-item">
+    <div class="basket-item-content">
+      <img mat-card-image [src]="item.electronic.imageUrl" alt="{{ item.electronic.name }}">
+      <div class="basket-item-details">
+        <h2 mat-card-title>{{ item.electronic.name }}</h2>
+        <p mat-card-subtitle>{{ item.quantity }} x {{ item.electronic.name }}</p>
+      </div>
+    </div>
+  </mat-card>
+  

@@ -1,0 +1,21 @@
+
+.example-container {
+    height: 100vh;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  mat-card {
+    max-width: 400px;
+    margin: 20px;
+  }
+  mat-card-title, mat-card-subtitle {
+    text-align: left;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="registration-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()" #registrationForm="ngForm" class="registration-form">
+      <mat-form-field class="form-group">
+        <input matInput placeholder="Username" name="username" [(ngModel)]="registration.email" required>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="registration.email" required email>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="registration.password" required>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="registration.confirmPassword" required>
+      </mat-form-field>
+      <div class="button-container">
+        <button mat-raised-button type="submit" color="primary" [disabled]="registrationForm.invalid || registration.password !== registration.confirmPassword">Register</button>
+      </div>
+    </form>
+  </div>

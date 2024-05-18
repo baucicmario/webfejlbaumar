@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use the whole viewport height */
+}
+
+.card {
+  width: 90%; /* Adjust the width of the card */
+  max-width: 600px; /* Limit the maximum width */
+}
+
+.not-found {
+  text-align: center;
+}
